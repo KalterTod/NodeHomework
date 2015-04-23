@@ -1,6 +1,7 @@
 # NodeHomework
 To run:
     
+    cd nodeHW
     npm install
     node app.js
     
