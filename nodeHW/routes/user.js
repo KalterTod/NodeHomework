@@ -47,7 +47,6 @@ exports.delete = function(req, res) {
   logger.info(req.path, req.method);
   
   db.collection('users').remove({_id: id}, {w:1}, function(err, doc) {
-    console.log(doc);
     if(err) res.send(500, {message: 'Internal Server Error'});
     else if (doc.result.n === 0) {
       res.send(404, {message: 'No user was found'});
